@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error Solution</title>
+</head>
+<body>
+  <p>This is a paragraph.</p>
+  <div id="myDiv"></div>
+
+  <script>
+    // Using DOMContentLoaded event to ensure the element exists before accessing it
+    document.addEventListener('DOMContentLoaded', function() {
+        if(document.getElementById("myDiv")) {
+            document.getElementById("myDiv").textContent = "Property set successfully!";
+        } else {
+            console.error("Element not found!");
+        }
+    });
+  </script>
+</body>
+</html>
